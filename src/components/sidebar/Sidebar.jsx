@@ -53,15 +53,22 @@ export default function Sidebar() {
                 <PlayCircleOutline className="sidebarIcon" />
                 Movies
               </li>
+
             </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Reports
-            </li>
+            <Link to="/tvShow" className="link">
+              <li className="sidebarListItem">
+                <PlayCircleOutline className="sidebarIcon" />
+                TvShow
+              </li>
+              
+            </Link>
+            <Link to="/anime" className="link">
+              <li className="sidebarListItem">
+                <PlayCircleOutline className="sidebarIcon" />
+                Anime
+              </li>
+              
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">

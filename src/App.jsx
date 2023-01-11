@@ -8,9 +8,11 @@ import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
 import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
-import Product from "./pages/product/Product";
+import TvShowList from "./pages/productList/TvShowList"
+import Movie from "./pages/product/Movie";
+import TvShow from "./pages/product/TvShows";
 import NewProduct from "./pages/newProduct/NewProduct";
-
+import NewTvShow from "./pages/newProduct/NewTvShow";
 function App() {
   return (
     <Router>
@@ -28,8 +30,12 @@ function App() {
           <Route path="/newUser"
            element={<User />}/>
           <Route path="/movies"element={<ProductList />}/>
-          <Route path="/product/:productId"element={<Product />}/>
+          <Route path="/tvShow"element={<TvShowList />}/>
+          <Route path="/movie/:movieId"element={<Movie />}/>
+          <Route path="/tvShow/:tvShowId"element={<TvShow />}/>
           <Route path="/newproduct"element={<NewProduct />}/>
+          <Route path="/newTvShow"element={<NewTvShow />}/>
+
         </Routes>
       </div>
     </Router>
