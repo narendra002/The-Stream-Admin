@@ -1,10 +1,13 @@
 .productList{
     flex: 4;
+    padding: 2%;
 }
+
 
 .productListItem{
     display: flex;
     align-items: center;
+    
 }
 
 .productListImg {

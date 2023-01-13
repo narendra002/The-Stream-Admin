@@ -15,6 +15,7 @@
   flex-direction: column;
   margin-bottom: 10px;
 padding: 20px;
+position: relative;
 }
 
 .addProductItem > label {
@@ -30,10 +31,20 @@ padding: 20px;
 .addProductItem > select {
   padding: 10px;
 }
+.addProductItem > button {
+  /* align-self: center; */
+  position: absolute;
+  /* /* margin-left: 12rem; */
+  margin-top: 2rem; 
+  right: 10px;
+
+}
 
 .addProductButton {
-  margin-top: 10px;
+  /* position: absolute; */
+  margin-top: 13px;
   padding: 7px 10px;
+  margin-left: 7%;
   border: none;
   border-radius: 10px;
   background-color: darkblue;
@@ -42,4 +53,10 @@ padding: 20px;
   cursor: pointer;
   height: 30px;
   align-self: center;
+  
+
 }
+
+
+
+

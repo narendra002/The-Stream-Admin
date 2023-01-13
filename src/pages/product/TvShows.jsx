@@ -12,9 +12,7 @@ export default function Product() {
     <div className="product">
       <div className="productTitleContainer">
         <h1 className="productTitle">Tv Show</h1>
-        <Link to="/newTvShow">
-          <button className="productAddButton">Create</button>
-        </Link>
+       
       </div>
       <div className="productTop">
          

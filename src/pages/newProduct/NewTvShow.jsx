@@ -12,7 +12,7 @@ export default function NewProduct() {
   const [tvshow, settvShow] = useState(null);
   const [img, setImg] = useState(null);
   const [imgTitle, setImgTitle] = useState(null);
-  const [imgSmall, setImgSmall] = useState(null);
+ 
   const [trailer, setTrailer] = useState(null);
   const [video, setVideo] = useState(null);
   const [uploaded, setUploaded] = useState(0);
@@ -75,9 +75,9 @@ console.log(item.file.name);
     upload([
       { file: img, label: "poster_path" },
       { file: imgTitle, label: "backdrop_path" },
-      { file: imgSmall, label: "poster_path" },
+    
       { file: trailer, label: "trailer" },
-      { file: video, label: "video" },
+      { file: content, label: "content" },
     ]);
     // console.log(e.target.name);
   };
@@ -100,7 +100,7 @@ console.log(item.file.name);
       <h1 className="addProductTitle">New TvShow</h1>
       <form className="addProductForm">
         <div className="addProductItem">
-          <label>Image</label>
+          <label>Poster Image</label>
           <input
             type="file"
             id="img"
@@ -109,7 +109,7 @@ console.log(item.file.name);
           />
         </div>
         <div className="addProductItem">
-          <label> Title image</label>
+          <label> BackGround Image</label>
           <input
             type="file"
             id="imgTitle"
@@ -117,15 +117,7 @@ console.log(item.file.name);
             onChange={(e) => setImgTitle(e.target.files[0])}
           />
         </div>
-        <div className="addProductItem">
-          <label> Thumbnail image</label>
-          <input
-            type="file"
-            id="imgSmall"
-            name="imgSmall"
-            onChange={(e) => setImgSmall(e.target.files[0])}
-          />
-        </div>
+
 
         <div className="addProductItem">
           <label>Title</label>
@@ -140,18 +132,27 @@ console.log(item.file.name);
           <label>Desciption</label>
           <input
             type="text"
-            placeholder="Desciption"
-            name="description"
+            placeholder="overview "
+            name="overview"
             onChange={handleChange}
           />
         </div>
 
         <div className="addProductItem">
-          <label>Limit</label>
+          <label>Total Episode</label>
           <input
             type="text"
-            placeholder="limit"
-            name="limit"
+            placeholder="episodes"
+            name="episodes"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="addProductItem">
+          <label>Total Season</label>
+          <input
+            type="text"
+            placeholder="season"
+            name="season"
             onChange={handleChange}
           />
         </div>
@@ -191,14 +192,17 @@ console.log(item.file.name);
           />
         </div>
         <div className="addProductItem">
-          <label> Video</label>
+          <label> Add Episode</label>
           <input
             type="file"
             id="video"
-            name="video"
+            name="content"
             onChange={(e) => setVideo(e.target.files[0])}
+        
           />
+              <button className="addProductButton"> Add </button>
         </div>
+        
         {uploaded === 4? (
           <button className="addProductButton"
           

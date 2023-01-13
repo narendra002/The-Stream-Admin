@@ -26,8 +26,9 @@ console.log(tvShows);
   const handleDelete = (id) => {
     deleteTvShow(id,dispatch);
   };
-
+  
   const columns = [
+   
     { field: "_id", headerName: "ID", width: 90 },
     {
       field: "tvshow",
@@ -81,7 +82,11 @@ console.log(tvShows);
 
   return (
     <div className="productList">
+      <Link to="/newTvShow">
+  <button className="productAddButton">Create</button>
+</Link>
       <DataGrid
+      
         rows={tvShows}
         disableSelectionOnClick
         columns={columns}

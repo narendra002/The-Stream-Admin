@@ -56,7 +56,7 @@ useEffect(() => {
             
             
             
-            to={"/product/"+params.row._id}
+            to={"/movie/"+params.row._id}
             state={{movie: params.row}}>
             
             
@@ -78,6 +78,9 @@ useEffect(() => {
 
   return (
     <div className="productList">
+       <Link to="/newproduct">
+          <button className="productAddButton">Create</button>
+        </Link>
       <DataGrid
         rows={movies}
         disableSelectionOnClick
