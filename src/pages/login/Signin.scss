@@ -1,0 +1,66 @@
+.main{
+    display: flex;
+    // background-image: url('');
+    background-color: rgb(12,37,49);
+    // align-items: center;
+    // justify-content: space-between;
+    width:100%;
+    height:730px;
+    background: rgb(12,37,50);
+    background: radial-gradient(circle, rgba(12,37,50,1) 82%, rgba(15,14,14,1) 100%);
+}
+.container{
+    align-items: center;
+    height: 300px;
+    // margin-left: 500px;
+    // background-color: rgb(27, 68, 68);
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+}
+
+.Signin{
+    width:500px;
+    height: 200px;
+    // background-color: rgb(27, 68, 68);
+    background: transparent;
+    padding: 20px;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.forgetpass{
+    align-content: center;
+    width: 500px;
+    justify-content: space-around;
+    align-items: center;
+    // padding: 10px;
+    display: flex;
+    flex-direction: row;
+    // background-color:blue;
+}
+a{
+    color: #488284;
+    text-decoration: none;
+
+}
+.Loginbtn{
+   padding: 10px 40px 10px 40px ;
+   background-color:red;
+   border-radius: 20px;
+   border: 2px solid #2c3e3f;
+   transform: 25px;
+   color: #488284;
+   background: transparent;
+ }
+ .Email{
+    width: 100%;
+    border-radius: 10px !important;
+    /* // background-color: aliceblue; */
+    text-decoration-color: aliceblue;
+    /* // color: red !important;
+    // border: 2px solid red !important; */
+ }

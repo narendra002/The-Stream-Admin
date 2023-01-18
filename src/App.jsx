@@ -13,15 +13,26 @@ import Movie from "./pages/product/Movie";
 import TvShow from "./pages/product/TvShows";
 import NewProduct from "./pages/newProduct/NewProduct";
 import NewTvShow from "./pages/newProduct/NewTvShow";
+import Login from './pages/login/login'
 function App() {
   return (
+
+
+<>
+
     <Router>
-      <Topbar />
+      <Routes>  
+    <Route path="/login" element={<Login />} />
+         
+      
+      <Route exact path="/" element={ <Topbar />} />
+      <>
       <div className="container">
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-     
+        
+          <Route exact path="/" element={ <Sidebar />} />
+       
+          <Route path="/" element={<Home />} /> 
+          
           <Route path="/users"
          element={<UserList />}/>
           <Route path="/user/:userId"
@@ -36,10 +47,12 @@ function App() {
           <Route path="/newproduct"element={<NewProduct />}/>
           <Route path="/newTvShow"element={<NewTvShow />}/>
 
-        </Routes>
+    
       </div>
+      </>
+        </Routes>
     </Router>
-  );
+    </> );
 }
 
 export default App;

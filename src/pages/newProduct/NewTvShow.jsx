@@ -7,15 +7,18 @@ import { storage } from "../../firebase";
 import {TvShowsContext} from "../../Context/TvShowContext/TvShowsContext";
 import { createTvShow } from "../../Context/TvShowContext/apiCalls";
 import { useContext } from "react";
-
+const MAX_COUNT = 5;
 export default function NewProduct() {
   const [tvshow, settvShow] = useState(null);
   const [img, setImg] = useState(null);
   const [imgTitle, setImgTitle] = useState(null);
- 
+   const [selectedFile,setSelectedFile]=useState([]);
   const [trailer, setTrailer] = useState(null);
   const [video, setVideo] = useState(null);
   const [uploaded, setUploaded] = useState(0);
+  const [uploadedFiles, setUploadedFiles] = useState([])
+    const [fileLimit, setFileLimit] = useState(false);
+
   const{dispatch}=useContext(TvShowsContext)
   // const storage = getStorage();
   const upload = (items) => {
@@ -77,19 +80,24 @@ console.log(item.file.name);
       { file: imgTitle, label: "backdrop_path" },
     
       { file: trailer, label: "trailer" },
-      { file: content, label: "content" },
+      { Array: selectedFile, label: "content" },
+      
     ]);
-    // console.log(e.target.name);
+    console.log(e.target.name);
   };
   const handleChange = (e) => {
     const value = e.target.value;
+    
     settvShow({
       ...tvshow,
       [e.target.name]: value,
     });
+    setSelectedFile(e.target.files);
 
-    // console.log(tvshow);
+    console.log(tvshow);
   };
+  
+
  const handleSubmission =(e)=>{
   e.preventDefault();
   createTvShow(tvshow,dispatch);
@@ -197,13 +205,12 @@ console.log(item.file.name);
             type="file"
             id="video"
             name="content"
-            onChange={(e) => setVideo(e.target.files[0])}
+          multiple onChange={handleChange}
         
           />
-              <button className="addProductButton"> Add </button>
         </div>
-        
-        {uploaded === 4? (
+       
+        {uploaded === 2? (
           <button className="addProductButton"
           
           onClick={handleSubmission}
