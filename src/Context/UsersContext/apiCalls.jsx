@@ -2,7 +2,7 @@ const API_KEY = '4008ea8497eda5d3e80f32017f7d35bc';
 const url = "http://127.0.0.1:4000";
 import axios from "axios"
 import {getUserSuccess,getUserStart,getUserFailure
-,	deleteUserFailure,deleteUserSuccess,deleteUserStart, createUserStart, createUserSuccess, createUserFailure} from "./UserActions";
+,	deleteUserFailure,deleteUserSuccess,deleteUserStart, createUserStart, createUserSuccess, createUserFailure, loginUserSuccess, loginUserStart} from "./UserActions";
 export const getUser=async(dispatch)=>{
 	dispatch(getUserStart());
 	try {
@@ -25,7 +25,17 @@ export const createUser=async(User,dispatch)=>{
 	}
 };
 
-
+export const loginUser=async(User,dispatch)=>{
+	dispatch(loginUserStart());
+	try {
+	const res=	await axios.post(`${url}/auth/login/`, User);
+		
+		dispatch(loginUserSuccess(res.data));
+	res.data.isAdmin && dispatch (loginUserStart(res.data));
+	} catch (error) {
+		dispatch(createUserFailure(error));
+	}
+};
 export const deleteUser=async(id,dispatch)=>{
 	dispatch(deleteUserStart());
 	try {

@@ -25,15 +25,29 @@ export const deleteUserFailure=()=>({
 	type:"DELETE_User_FAILURE",
 });
 
-export const createUsertart=()=>({
+export const createUserStart=()=>({
 	type:"CREATE_User_START",
 });
 
-export const createUseruccess=(User)=>({
+export const createUserSuccess=(User)=>({
 	type:"CREATE_User_SUCCESS",
-	payload:movie,
+	payload:User,
 });
 
 export const createUserFailure=()=>({
 	type:"CREATE_User_FAILURE",
+});
+
+
+export const loginUserStart=()=>({
+	type:"Login_User_START",
+});
+
+export const loginUserSuccess=(User)=>({
+	type:"Login_User_SUCCESS",
+	payload:User,
+});
+
+export const loginUserFailure=()=>({
+	type:"Login_User_FAILURE",
 });

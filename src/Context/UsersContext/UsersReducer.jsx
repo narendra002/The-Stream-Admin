@@ -45,7 +45,26 @@ const UserReducer=(state,action)=>{
 
 
 
-
+				case "Login_User_START":
+					return{
+						...state,
+						isFetching:true,
+						error:false,
+					};
+		
+					case "Login_User_SUCCESS":
+					return{
+						User:action.payload,
+						isFetching:false,
+						error:false,
+					};
+		
+					case "Login_User_FAILURE":
+					return{
+						User:null,
+						isFetching:false,
+						error:true,
+					};
 
 
 			case "DELETE_User_START":
