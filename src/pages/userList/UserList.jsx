@@ -3,9 +3,23 @@ import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { userRows } from "../../dummyData";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import React from "react";
+import { UserContext } from "../../Context/UsersContext/UsersContext";
+import { getUser } from "../../Context/UsersContext/apiCalls";
 export default function UserList() {
+
+
+  // const{User,dispatch}=useContext(UserContext) ;
+  // useEffect(() => {
+  //   getUser(dispatch);
+  
+    
+  // }, [dispatch]);
+  
+  // console.log(User);
+  
+
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {

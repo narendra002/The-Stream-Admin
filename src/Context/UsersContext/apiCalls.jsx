@@ -6,7 +6,13 @@ import {getUserSuccess,getUserStart,getUserFailure
 export const getUser=async(dispatch)=>{
 	dispatch(getUserStart());
 	try {
-		const res= await axios.get(`${url}/auth`);
+		const res= await axios.get(`${url}/auth`
+		,{
+			headers:{
+				token:"Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+			},
+		}
+		);
 		
 		dispatch(getUserSuccess(res.data));
 	} catch (error) {
@@ -46,3 +52,10 @@ export const deleteUser=async(id,dispatch)=>{
 		dispatch(deleteUserFailure(error));
 	}
 };
+// export const logoutUser = async (dispatch) => {
+// 	dispatch();
+// 	try {
+	
+// 	}
+//   };
+  

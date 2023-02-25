@@ -25,6 +25,7 @@ return(
 				isFetching:state.isFetching,
 				error:state.error,
 		dispatch,
+		// logOutUser,
 	}
 	}>
 		{children}

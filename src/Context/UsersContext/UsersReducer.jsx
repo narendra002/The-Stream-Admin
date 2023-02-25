@@ -88,7 +88,26 @@ const UserReducer=(state,action)=>{
 					error:true,
 				};
 
-
+					// case "LOGOUT_User_START":
+					// 	return{
+					// 		User:null,
+					// 		isFetching:true,
+					// 		error: false, 
+					// 	}
+						
+					// 	case "LOGOUT_USER_SUCCESS":
+					// 		return {
+					// 		User: null,
+					// 		isFetching: false,
+					// 		error: false,
+					// 		};
+						
+					// case "LOGOUT_User_FAILURE":
+					// 	return {
+					// 		...state,
+					// 		isFetching: false,
+					// 		error: true 
+					// 	}
 
 
 

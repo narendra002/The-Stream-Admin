@@ -52,15 +52,13 @@ useEffect(() => {
         return (
           <>
             <Link 
-            // to= {"/product/"+params.row._id}  state={{movie:params.row}}
+          
             
             
             
             to={"/movie/"+params.row._id}
             state={{movie: params.row}}>
-            
-            
-            {/* > */}
+    
             
             
             

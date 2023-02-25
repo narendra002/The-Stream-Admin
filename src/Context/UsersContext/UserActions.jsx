@@ -48,6 +48,16 @@ export const loginUserSuccess=(User)=>({
 	payload:User,
 });
 
-export const loginUserFailure=()=>({
-	type:"Login_User_FAILURE",
-});
+// export const logoutUSerFailure=()=>({
+// 	type:"Login_User_FAILURE",
+// });
+// export const logoutUserStart=()=>({
+// 	type:"LOGOUT_User_START",
+// });
+
+// export const logoutUserSuccess = (User) => {
+//     return {
+//         type: "LOGOUT_USER_SUCCESS",
+//         payload: User
+//     } 
+// }
