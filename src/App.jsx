@@ -21,8 +21,6 @@ function App() {
   const { User } = useContext(UserContext);
   return (
     <Router>
-      
-      
         {User ? (
           <>
           <Topbar />
@@ -43,12 +41,10 @@ function App() {
          </div> </>
         ) : (
           <Routes>
-            
             <Route path='/login' element={<Signin />} />
             <Route path='/' element={<Navigate to='/login' />} />
           </Routes>
         )}
-      
     </Router>
   );
 }
