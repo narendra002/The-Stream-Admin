@@ -40,8 +40,8 @@ useEffect(() => {
       },
     },
     { field: "genre", headerName: "Genre", width: 120 },
-    { field: "first_air_date", headerName: "first_air_date", width: 120 },
-    { field: "limit", headerName: "limit", width: 120 },
+    { field: "release_date", headerName: "Release_date", width: 120 },
+    { field: "duration", headerName: "Duration", width: 120 },
     { field: "isSeries", headerName: "isSeries", width: 120 },
     
     {
