@@ -42,7 +42,7 @@ useEffect(() => {
     { field: "genre", headerName: "Genre", width: 120 },
     { field: "release_date", headerName: "Release_date", width: 120 },
     { field: "duration", headerName: "Duration", width: 120 },
-    { field: "isSeries", headerName: "isSeries", width: 120 },
+    
     
     {
       field: "action",
