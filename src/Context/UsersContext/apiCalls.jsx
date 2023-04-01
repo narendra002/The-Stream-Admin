@@ -1,5 +1,5 @@
 const API_KEY = '4008ea8497eda5d3e80f32017f7d35bc';
-const url = "http://127.0.0.1:4000";
+const url = "https://the-stream-backend.vercel.app";
 import axios from "axios"
 import {getUserSuccess,getUserStart,getUserFailure
 ,	deleteUserFailure,deleteUserSuccess,deleteUserStart, createUserStart, createUserSuccess, createUserFailure, loginUserSuccess, loginUserStart} from "./UserActions";
