@@ -28,16 +28,9 @@ export default function Product() {
                   </div>
                   <div className="productInfoItem">
                       <span className="productInfoKey">Year:</span>
-                      <span className="productInfoValue">{movie.first_air_date}</span>
+                      <span className="productInfoValue">{movie.release_date}</span>
                   </div>
-                  <div className="productInfoItem">
-                      <span className="productInfoKey">active:</span>
-                      <span className="productInfoValue">yes</span>
-                  </div>
-                  <div className="productInfoItem">
-                      <span className="productInfoKey">in stock:</span>
-                      <span className="productInfoValue">no</span>
-                  </div>
+                 
               </div>
           </div>
       </div>
@@ -46,19 +39,18 @@ export default function Product() {
               <div className="productFormLeft">
                   <label>Movie Name</label>
                   <input type="text" placeholder={movie.title} />
-                  <label> first_air_date</label>
-                 <input type="text" placeholder={movie.first_air_date} />
-                 <label> isSeries</label>
-                 <input type="text" placeholder={movie.isSeries} />
+                  <label> Release Date</label>
+                 <input type="text" placeholder={movie.release_date} />
+               
                  
                  <label> Genre</label>
                  <input type="text" placeholder={movie.genre} />
-                 <label> Limit</label>
-                 <input type="text" placeholder={movie.limit} />
+                 <label> Duration</label>
+                 <input type="text" placeholder={movie.duration} />
                  <label> Trailer</label>
-                 <input type="file" placeholder={movie.trailer} />
+                 <input type="text" placeholder={movie.trailer} />
                  <label> Video</label>
-                 <input type="file" placeholder={movie.video} />
+                 <input type="text" placeholder={movie.video} />
                   
               </div>
               <div className="productFormRight">

@@ -14,6 +14,7 @@ import NewProduct from './pages/newProduct/NewProduct';
 import NewTvShow from './pages/newProduct/NewTvShow';
 import Sidebar from './components/sidebar/Sidebar';
 import Topbar from './components/topbar/Topbar';
+import Review from './pages/Review/Review'
 import './App.css';
 import { NavigateBefore } from '@material-ui/icons';
 
@@ -28,6 +29,7 @@ function App() {
             <Sidebar />
             <Routes>
               <Route path='/' element={<Home />} />
+              <Route path='/review' element={<Review />} />
               <Route path='/users' element={<UserList />} />
               <Route path='/user/:userId' element={<User />} />
               <Route path='/newUser' element={<NewUser />} />

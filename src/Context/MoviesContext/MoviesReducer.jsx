@@ -70,7 +70,9 @@ const MoviesReducer=(state,action)=>{
 				};
 
 
-
+				case "ACCEPT_MOVIE":
+					const updatedMovies = state.movies.filter((movie) => movie._id !== action.payload);
+					return { ...state, movies: updatedMovies };
 
 
 

@@ -13,6 +13,16 @@ export const getMovies=async(dispatch)=>{
 		dispatch(getMoviesFailure(error));
 	}
 };
+export const getMoviesReview=async(dispatch)=>{
+	dispatch(getMoviesStart());
+	try {
+		const res= await axios.get(`${url}/movie/movies/review`);
+		
+		dispatch(getMoviesSuccess(res.data));
+	} catch (error) {
+		dispatch(getMoviesFailure(error));
+	}
+};
 export const createMovie=async(movie,dispatch)=>{
 	dispatch(createMovieStart());
 	try {
@@ -30,6 +40,17 @@ export const deleteMovies=async(id,dispatch)=>{
 	dispatch(deleteMoviesStart());
 	try {
 		 await axios.delete(`${url}/movie/`+id);
+		
+		dispatch(deleteMoviesSuccess(id));
+	} catch (error) {
+		dispatch(deleteMoviesFailure(error));
+	}
+};
+
+export const deleteReviewMovies=async(id,dispatch)=>{
+	dispatch(deleteMoviesStart());
+	try {
+		 await axios.delete(`${url}/movie/review`+id);
 		
 		dispatch(deleteMoviesSuccess(id));
 	} catch (error) {
