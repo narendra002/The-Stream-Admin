@@ -136,10 +136,10 @@ console.log(item.file.name);
           />
         </div>
         <div className="addProductItem">
-          <label>Desciption</label>
+          <label>Description</label>
           <input
             type="text"
-            placeholder="Desciption"
+            placeholder="Description"
             name="description"
             onChange={handleChange}
           />
